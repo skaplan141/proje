@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otel Videoları</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #004d99;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-top: 10px;
+        }
+
+        .video-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            padding: 30px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .video-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .video-card iframe {
+            width: 100%;
+            height: 220px;
+            border: none;
+        }
+
+        .video-card h3 {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: #004d99;
+            text-align: center;
+            padding: 15px;
+            background-color: #f8f8f8;
+        }
+
+        .video-card p {
+            font-size: 0.95rem;
+            color: #777;
+            padding: 0 15px 15px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #004d99;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            .video-container {
+                padding: 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Otel Videoları</h1>
+        <p>Otelimizin sunduğu eşsiz deneyimlerin yer aldığı videoları keşfedin.</p>
+    </header>
+
+    <div class="video-container">
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/0RnSVNAetcM" allowfullscreen></iframe>
+            <h3>Otel Genel Tanıtımı</h3>
+            <p>Otelimizin sunduğu imkanlar ve hizmetler hakkında bilgi edinin.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/FOCp9rMMcZU" allowfullscreen></iframe>
+            <h3>Lüks Odalar</h3>
+            <p>Lüks odalarımızın iç tasarımı ve manzarası.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/xQ_0dACHQ7U" allowfullscreen></iframe>
+            <h3>Restoran ve Yemekler</h3>
+            <p>Şeflerimizin hazırladığı özel yemeklerden bir kesit.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/V3pwJ4GkNmU" allowfullscreen></iframe>
+            <h3>Spa ve Wellness</h3>
+            <p>Spa ve wellness merkezimizdeki rahatlatıcı deneyimler.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/2dyAy2W_Nm4" allowfullscreen></iframe>
+            <h3>Butik Oteller</h3>
+            <p>Genellikle küçük, şık ve tematik otellerdir. Kişiselleştirilmiş bir konaklama deneyimi sunar.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/gd5ODU_S6-g" allowfullscreen></iframe>
+            <h3>İş Otelleri</h3>
+            <p>İş amaçlı seyahat edenler için tasarlanmıştır. Konferans salonları, hızlı internet ve iş merkezi gibi olanaklar sunar.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/6JSqkNeBeiE" allowfullscreen></iframe>
+            <h3>Tatil Köyleri</h3>
+            <p>Genellikle tatil beldelerinde yer alır. Havuz, plaj erişimi, su sporları, golf gibi aktiviteler içerir.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/IujzAxBwm9Y" allowfullscreen></iframe>
+            <h3>Havaalanı Otelleri</h3>
+            <p>Havaalanlarına yakın konumlanmıştır. Kısa süreli konaklamalar ve transit yolcular için idealdir.</p>
+        </div>
+
+        <div class="video-card">
+            <iframe src="https://www.youtube.com/embed/example4" allowfullscreen></iframe>
+            <h3>Tarihî Oteller</h3>
+            <p>Tarihi binalarda yer alır ve geçmişin atmosferini yaşatır. Genellikle kaleler, saraylar ya da eski konaklardan dönüştürülür.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Oteliniz. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
+
+

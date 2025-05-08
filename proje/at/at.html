@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otel Rezervasyon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    <header>
+        <div class="header-content">
+            <h1>Otel Rezervasyonu</h1>
+            <p>Hayalinizdeki tatili şimdi ayırtın, unutulmaz bir deneyim yaşayın!</p>
+        </div>
+    </header>
+
+    <section class="reservation-form">
+        <div class="container">
+            <h2>Rezervasyon Yapın</h2>
+            <form id="reservationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="check-in-date">Giriş Tarihi</label>
+                        <input type="date" id="check-in-date" name="check-in-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="check-out-date">Çıkış Tarihi</label>
+                        <input type="date" id="check-out-date" name="check-out-date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="room-type">Oda Tipi</label>
+                    <select id="room-type" name="room-type" required>
+                        <option value="single">Tek Kişilik Oda</option>
+                        <option value="double">Çift Kişilik Oda</option>
+                        <option value="suite">Süit</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests">Misafir Sayısı</label>
+                    <input type="number" id="guests" name="guests" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Rezervasyon Yap</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Otel Rezervasyon Sistemi | Tüm Haklar Saklıdır</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
