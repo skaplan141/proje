@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Daha açık ve ferah bir arka plan */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #ffffff; /* Beyaz arka plan */
+    padding: 30px;
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Daha derin gölge */
+    text-align: center;
+}
+
+h1 {
+    color: #007bff; /* Mavi başlık rengi */
+    margin-bottom: 20px;
+    font-size: 32px; /* Daha büyük başlık boyutu */
+    font-weight: bold; /* Kalın başlık */
+}
+
+.response {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd; /* Açık gri kenar rengi */
+    border-radius: 10px; /* Yuvarlatılmış kenarlar */
+    background-color: #f8f9fa; /* Açık gri arka plan */
+    max-height: 300px;
+    overflow-y: auto;
+    text-align: left;
+    font-size: 16px; /* Yanıt metni boyutu */
+    color: #333; /* Koyu metin rengi */
+    line-height: 1.5; /* Satır yüksekliği */
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px; /* Giriş alanı ve buton arasında boşluk */
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px; /* İç boşluk */
+    border: 2px solid #007bff; /* Mavi kenar rengi */
+    border-radius: 10px; /* Yuvarlatılmış kenarlar */
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s; /* Kenar rengi geçiş efekti */
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3; /* Odaklanıldığında daha koyu mavi */
+    outline: none; /* Kenar çizgisi kaldırıldı */
+}
+
+button {
+    padding: 15px 25px; /* Buton iç boşluğu */
+    border: none;
+    border-radius: 10px; /* Yuvarlatılmış kenarlar */
+    background-color: #007bff; /* Mavi arka plan */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Geçiş efektleri */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Buton gölgesi */
+}
+
+button:hover {
+    background-color: #0056b3; /* Hover durumunda daha koyu mavi */
+    transform: translateY(-2px); /* Hover durumunda yukarı kaydırma */
+}
+
+button:active {
+    transform: translateY(0); /* Butona tıklandığında geri döner */
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666; /* Açık gri metin rengi */
+}

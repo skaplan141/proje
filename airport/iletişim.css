@@ -1,0 +1,109 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern yazı tipi */
+    line-height: 1.6; /* Satır aralığı */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e9ecef, #ffffff); /* Renk geçişli arka plan */
+}
+
+/* İletişim Bölümü */
+#contact {
+    background-color: rgba(255, 255, 255, 0.9); /* Beyaz arka plan, saydamlık ekledik */
+    padding: 40px;
+    border-radius: 15px; /* Köşeleri yuvarla */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Derin gölge efekti */
+    max-width: 600px; /* Maksimum genişlik */
+    margin: 50px auto; /* Ortalamak için */
+    transition: transform 0.3s, box-shadow 0.3s; /* Hover efekti için geçiş */
+    position: relative; /* Konum ayarları */
+    z-index: 1; /* Diğer öğelerin üzerinde görünmesi için */
+}
+
+#contact:hover {
+    transform: translateY(-5px); /* Hoverda yukarı kayma efekti */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Daha belirgin gölge */
+}
+
+.container {
+    text-align: center; /* Metin ortalama */
+}
+
+h2 {
+    color: #007BFF; /* Mavi başlık rengi */
+    margin-bottom: 20px; /* Alt boşluk */
+    font-size: 28px; /* Başlık boyutu */
+}
+
+p {
+    color: #007BFF; /* Açık mavi metin rengi */
+    margin-bottom: 30px; /* Alt boşluk */
+}
+
+/* Form Ayarları */
+.contact-form {
+    display: flex;
+    flex-direction: column; /* Dikey düzen */
+    gap: 20px; /* Alanlar arası boşluk */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Dikey düzen */
+    align-items: flex-start; /* Solda hizalama */
+}
+
+label {
+    font-weight: bold; /* Kalın yazı */
+    color: #333; /* Koyu metin rengi */
+    margin-bottom: 5px; /* Alt boşluk */
+}
+
+input, textarea {
+    padding: 15px; /* İç boşluk */
+    border: 1px solid #ccc; /* Kenar rengi */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    font-size: 16px; /* Yazı boyutu */
+    width: 100%; /* Genişlik ayarı */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Kenar rengi ve gölge geçişi */
+}
+
+input:focus, textarea:focus {
+    border-color: #007BFF; /* Mavi kenar rengi odaklandığında */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Mavi gölge */
+    outline: none; /* Kenar çerçevesini kaldır */
+}
+
+button {
+    padding: 15px;
+    background-color: #007BFF; /* Mavi arka plan */
+    color: white; /* Beyaz metin */
+    border: none;
+    border-radius: 5px; /* Köşeleri yuvarla */
+    cursor: pointer; /* İmleç değişimi */
+    font-size: 16px; /* Yazı boyutu */
+    transition: background-color 0.3s, transform 0.3s; /* Arka plan rengi ve büyüme geçişi */
+}
+
+button:hover {
+    background-color: #0056b3; /* Daha koyu mavi hover efekti */
+    transform: scale(1.05); /* Hoverda buton büyüme efekti */
+}
+
+button:active {
+    transform: scale(0.95); /* Butona tıklandığında küçülme efekti */
+}
+
+/* Arka Plan Fotoğrafı */
+#background {
+    position: absolute; /* Pozisyon ayarı */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('your-image-url.jpg'); /* Fotoğraf URL'sini buraya ekleyin */
+    background-size: cover; /* Fotoğrafı kapsayacak şekilde ayarla */
+    background-position: center; /* Fotoğrafın ortalanması */
+    z-index: 0; /* Formun arkasında kalması için */
+    opacity: 0.5; /* Saydamlık ekle */
+}

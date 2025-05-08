@@ -1,0 +1,408 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff; /* Açık mavi arka plan */
+    animation: fadeIn 1s ease; /* Sayfa açılış animasyonu */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background: #0056b3; /* Koyu mavi arka plan */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    width: 100px; /* Logo boyutunu ayarlayın */
+}
+
+nav {
+    background: rgba(0, 86, 179, 0.9); /* Şeffaf mavi arka plan */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Üstteki öğelerin üzerinde görünmesi için */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Menü öğelerini ortala */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative; /* Alt çizgi için konumlandırma */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative; /* Alt çizgi için konumlandırma */
+    padding: 5px 0; /* Yukarıdan aşağıya boşluk */
+    transition: color 0.3s ease; /* Renk geçişi */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Alt çizginin konumu */
+    width: 0;
+    height: 2px;
+    background: #ffcc00; /* Alt çizgi rengi */
+    transition: width 0.3s ease, left 0.3s ease; /* Alt çizgi geçişi */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Alt çizgi genişlemesi */
+    left: 0; /* Alt çizgiyi sola hizala */
+}
+
+.search-bar {
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background: #ffcc00; /* Sarı buton */
+    color: #0056b3; /* Koyu mavi yazı */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+    background: #e6b800; /* Hover efekti */
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 600px; /* Kahraman resminin yüksekliği */
+    object-fit: cover;
+    animation: slideIn 1s ease; /* Kahraman resmi animasyonu */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Daha koyu bir arka plan */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.cta-button {
+    padding: 10px 20px;
+    background: #ffcc00; /* Sarı buton */
+    color: #0056b3; /* Koyu mavi yazı */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e6b800; /* Hover efekti */
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    overflow: hidden; /* Taşmayı gizle */
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease; /* Geçiş animasyonu */
+}
+
+.slide {
+    min-width: 100%; /* Her slayt %100 genişlikte */
+    transition: opacity 0.5s ease-in-out; /* Opaklık geçişi */
+    position: relative; /* Konumlandırma için */
+}
+
+.slide img {
+    width: 100%; /* Resim genişliği %100 */
+    height: 800px; /* Yükseklik sabit */
+    object-fit: cover; /* Resim kesilmeden sığmasını sağlar */
+    border-radius: 10px; /* Köşeleri yuvarla */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Hover geçişi */
+}
+
+button.prev {
+    left: 10px; /* Sol buton */
+}
+
+button.next {
+    right: 10px; /* Sağ buton */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Hover efekti */
+}
+
+/* Aktif slayt için stil */
+.slide.active {
+    opacity: 1; /* Aktif slayt görünür */
+}
+
+.slide.inactive {
+    opacity: 0; /* Pasif slayt gizli */
+}
+
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px; /* Sol buton */
+}
+
+button.next {
+    right: 10px; /* Sağ buton */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Hover efekti */
+}
+
+.services {
+    padding: 20px;
+    background: #e6f7ff; /* Açık mavi arka plan */
+    text-align: center;
+}
+
+.service-box {
+    margin: 20px;
+    display: inline-block;
+    width: 30%; /* Hizmet kutularının genişliği */
+    vertical-align: top;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 0.5s ease; /* Hizmet kutuları animasyonu */
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.service-box:hover {
+    transform: scale(1.05); /* Hover efekti */
+}
+
+.service-icon {
+    width: 80px; /* İkon boyutu */
+}
+
+/* Rezervasyon Alanı */
+.reservation {
+    padding: 20px;
+    background: #e6f7ff; /* Açık mavi arka plan */
+    margin: 20px 0;
+    border-radius: 10px; /* Köşeleri yuvarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme efekti */
+    transition: transform 0.3s ease;
+}
+
+.reservation:hover {
+    transform: scale(1.02); /* Hover efekti */
+}
+
+.reservation h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3; /* Koyu mavi yazı */
+}
+
+.reservation form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reservation label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #0056b3; /* Koyu mavi yazı */
+}
+
+.reservation select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%; /* Genişlik ayarı */
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease; /* Kenar rengi geçişi */
+}
+
+.reservation select:focus {
+    border-color: #ffcc00; /* Sarı kenar rengi */
+    outline: none; /* Kenar çizgisi kaldır */
+}
+
+.reservation button {
+    padding: 10px 20px;
+    background: #ffcc00; /* Sarı buton */
+    color: #0056b3; /* Koyu mavi yazı */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Geçiş animasyonu */
+}
+
+.reservation button:hover {
+    background: #e6b800; /* Hover efekti */
+    transform: scale(1.05); /* Hoverda büyüme efekti */
+}
+
+
+/* Müşteri Yorumları */
+.customer-reviews {
+    padding: 20px;
+    background: #fff; /* Beyaz arka plan */
+    margin: 20px 0;
+    border-radius: 10px; /* Köşeleri yuvarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölgelendirme efekti */
+}
+
+.customer-reviews h2 {
+    text-align: center;
+    color: #0056b3; /* Koyu mavi yazı */
+    margin-bottom: 20px;
+}
+
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-card {
+    background: #f9f9f9; /* Açık gri arka plan */
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 80%; /* Genişlik ayarı */
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: scale(1.02); /* Hover efekti */
+}
+
+.review-card p {
+    font-style: italic; /* İtalik yazı */
+}
+
+.review-card span {
+    display: block;
+    text-align: right;
+    font-weight: bold; /* Kalın yazı */
+    margin-top: 10px;
+    color: #0056b3; /* Koyu mavi yazı */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #0056b3; /* Koyu mavi arka plan */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Joe Hand';
+    src: url('fonts/JoeHand.ttf') format('truetype'); /* Yazı tipi dosya yolunu güncelleyin */
+}
+
+h1, .hero-text h2, .cta-button {
+    font-family: 'Joe Hand', cursive; /* Yazı tipini uygulayın */
+}
+.photo-gallery {
+    display: flex;
+    justify-content: space-around; /* Alanı eşit dağıt */
+    margin: 20px 0; /* Üst ve alt boşluk */
+}
+
+.photo-gallery a {
+    flex: 1; /* Eşit genişlikte alan kapla */
+    margin: 0 10px; /* Yan boşluk */
+}
+
+.photo-gallery img {
+    width: 100%; /* Resim genişliği %100 */
+    height: auto; /* Yükseklik otomatik */
+    border-radius: 10px; /* Köşeleri yuvarla */
+    transition: transform 0.3s ease; /* Hover geçişi */
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05); /* Hoverda büyüme efekti */
+}
+.flight-search {
+    margin-top: 20px;
+}
+
+.flight {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+

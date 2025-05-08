@@ -1,0 +1,64 @@
+footer {
+    background-color: #003366; /* Koyu mavi arka plan */
+    color: white; /* Beyaz metin rengi */
+    padding: 40px 20px; /* Üst ve alt boşluk */
+    text-align: left; /* Soldan hizalama */
+}
+
+.footer-container {
+    display: flex; /* Esnek kutu düzeni */
+    justify-content: space-between; /* Elemanlar arasında boşluk bırak */
+    max-width: 1200px; /* Maksimum genişlik */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1; /* Her bölüm eşit genişlikte */
+    margin: 0 20px; /* Yan boşluklar */
+}
+
+.footer-links h4, .footer-contact h4, .footer-social h4 {
+    border-bottom: 2px solid #FFD700; /* Alt çizgi */
+    padding-bottom: 10px; /* Alt boşluk */
+}
+
+.footer-links ul {
+    list-style-type: none; /* Noktaları kaldır */
+    padding: 0; /* İç boşlukları kaldır */
+}
+
+.footer-links li {
+    margin: 10px 0; /* Üst ve alt boşluk */
+}
+
+.footer-links a, .footer-contact a {
+    color: white; /* Beyaz bağlantı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    transition: color 0.3s; /* Renk geçişi */
+}
+
+.footer-links a:hover, .footer-contact a:hover {
+    color: #FFD700; /* Hoverda altın rengi */
+}
+
+.footer-social {
+    display: flex; /* Esnek kutu düzeni */
+    flex-direction: column; /* Dikey hizalama */
+}
+
+.footer-social a {
+    color: white; /* Beyaz bağlantı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldır */
+    margin: 5px 0; /* Üst ve alt boşluk */
+    transition: color 0.3s; /* Renk geçişi */
+}
+
+.footer-social a:hover {
+    color: #FFD700; /* Hoverda altın rengi */
+}
+
+.footer-bottom {
+    text-align: center; /* Ortalamak için */
+    margin-top: 20px; /* Üst boşluk */
+    font-size: 14px; /* Küçük yazı boyutu */
+}
